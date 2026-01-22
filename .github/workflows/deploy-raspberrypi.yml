@@ -1,4 +1,4 @@
-name: Deploy
+name: Deploy on RaspberryPi
 
 on:
   workflow_run:
