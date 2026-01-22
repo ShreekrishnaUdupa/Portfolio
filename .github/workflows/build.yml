@@ -16,9 +16,11 @@ jobs:
           node-version: 20
       
       - name: Install dependencies
+        working-directory: frontend
         run: npm ci
 
       - name: Build
+        working-directory: frontend
         run: npm run build
       
       - name: Upload build artifact
@@ -26,4 +28,3 @@ jobs:
         with:
           name: portfolio-dist
           path: dist
-          
