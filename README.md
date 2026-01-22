@@ -1,1 +1,1 @@
-Portfolio of Shreekrishna Udupa (Will be self hosted on shreekrishnaudupa.tech)
+Portfolio of Shreekrishna Udupa (Hosted on <a href="https://shreekrishnaudupa.tech"> shreekrishnaudupa.tech </a>)
