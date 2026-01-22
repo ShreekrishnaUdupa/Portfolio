@@ -21,6 +21,8 @@ jobs:
         with:
           name: portfolio-dist
           run-id: ${{ github.event.workflow_run.id }}
+          repository: ${{ github.repository }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           path: /tmp/portfolio-dist
 
       - name: Deploy
