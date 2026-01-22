@@ -1,0 +1,28 @@
+name: Deploy
+
+on:
+  workflow_run:
+    workflows: ["Build Portfolio"]
+    types:
+      - completed
+
+jobs:
+  deploy:
+    if: ${{ github.event.workflow_run.conclusion == 'success'}}
+
+    runs-on: [self-hosted, raspberrypi]
+
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: portfolio-dist
+          run-id: ${{ github.event.workflow_run.id }}
+          path: /tmp/portfolio-dist
+
+      - name: Deploy
+        run: |
+          sudo rm -rf /var/www/portfolio
+          sudo mkdir -p /var/www/portfolio
+          sudo cp -r /tmp/portfolio-dist/. /var/www/portfolio
+
