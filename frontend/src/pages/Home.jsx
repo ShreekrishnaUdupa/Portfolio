@@ -7,7 +7,7 @@ export default function Home () {
       <div>
         <div> Welcome user from a beautiful part of the internet! This website is self-hosted as illustrated below.</div>
         Please note that the frontend in itself is in it's building stage & will be beautified using React & Tailwindcss soon.<br />
-        You can check the process at this<a href="https://github.com/ShreekrishnaUdupa/Portfolio" style={{ color: 'blue' }}> Github Repo </a>
+        You can check the progress at this<a href="https://github.com/ShreekrishnaUdupa/Portfolio" style={{ color: 'blue' }}> Github Repo </a>
 
         <br />
 
